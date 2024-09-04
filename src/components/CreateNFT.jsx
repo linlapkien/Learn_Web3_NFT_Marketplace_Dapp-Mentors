@@ -20,7 +20,7 @@ const CreateNFT = () => {
     if (!title || !description || !price) return;
 
     console.log('Minted...');
-    resetForm();
+    closeModal();
   };
 
   const closeModal = () => {

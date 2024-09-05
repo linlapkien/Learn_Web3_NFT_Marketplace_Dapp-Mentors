@@ -8,8 +8,14 @@ import ShowNFT from './components/ShowNFT';
 import UpdateNFT from './components/UpdateNFT';
 import Loading from './components/Loading';
 import Alert from './components/Alert';
+import { useEffect } from 'react';
+import { isWallectConnected } from './Blockchain.services';
 
 const App = () => {
+  useEffect(async () => {
+    await isWallectConnected();
+  }, []);
+
   return (
     <div className="min-h-screen">
       <div className="gradient-bg-hero">
